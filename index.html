@@ -1,0 +1,111 @@
+<head>
+    <script src="jugador.js"></script>
+    <script src="funcionesJuego.js"></script>
+    <script src="tiempoJugado.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container pt-5">
+        <div class="row justify-content-center pb-4">
+            <div class="col-6 text-center">
+
+
+                <div id="usuarioEsperando">
+                    <h1 class="nombreUsuario"></h1>
+                    <h5>Elige tu movimiento:</h5>
+                    <br>
+                    <div class="btn-group" role="group" aria-label="Basic outlined example">
+                        <button type="button" id="botonPiedra" class="btn btn-outline-secondary"
+                            value="1">PIEDRA</button>
+                        <button type="button" id="botonPapel" class="btn btn-outline-secondary" value="2">PAPEL</button>
+                        <button type="button" id="botonTijeras" class="btn btn-outline-secondary"
+                            value="3">TIJERAS</button>
+                    </div>
+                </div>
+
+                <div id="usuarioMovimiento" hidden>
+                    <h1 class="nombreUsuario"></h1>
+                    <h5>Jugando con:</h5>
+                    <h3><span id="spanUsuario" class="badge bg-primary"></span></h3>
+
+                </div>
+
+
+
+            </div>
+            <div class="col-6 text-center">
+
+                <div id="maquinaEsperando">
+                    <h1>MAQUINA</h1>
+                    <br>
+                    <h5>Esperando por tu elección...</h5>
+                    <div class="spinner-border" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+
+
+                </div>
+
+                <div id="maquinaMovimiento" hidden>
+                    <h1>MAQUINA</h1>
+                    <h5>Jugando con:</h5>
+                    <h3><span id="spanMaquina" class="badge bg-danger"></span></h3>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <div id="alertaLog" class="alert alert-primary text-center" hidden role="alert">
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ESTADISTICAS -->
+        <div class="row pt-5">
+            <div class="col-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Piedra-Papel-Tijeras</h5>
+                        <p id="estadisticasJugador"></p>
+                        <p>Tiempo Jugado: <span id="text_cronometro"></span></p>
+
+                        <button id="nuevaPartida" type="button" class="btn btn-danger">Nueva Partida</button>
+                        <button id="botonContinuar" type="button" class="btn btn-primary" hidden>Continuar
+                            Jugando</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="row justify-content-center pt-5">
+                <div class="col-4">
+                    <div id="alertaLog" class="alert alert-primary text-center" hidden role="alert"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="log" class="row justify-content-center pb-5">
+            <h5>Log</h5>
+            <ul id="ulLog" class="list-group list-group-flush">
+                
+            </ul>
+        </div>
+
+    </div>
+
+
+
+</body>
+<footer>
+    <script src="main.js"></script>
+</footer>
